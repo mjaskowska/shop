@@ -1,0 +1,36 @@
+.hero {
+  background-image: url("../../../assets/hero.jpg");
+  background-color: black;
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background: {
+    position: top;
+    repeat: no-repeat;
+    size: cover;
+  }
+  margin: auto {
+    top: 50px;
+  }
+}
+.hero__overlay {
+    height: 100%;
+    width: 100%;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.849), transparent 100%);
+    }
+ 
+}
+.hero__title {
+  color: white;
+  z-index: 100;
+  position: absolute;
+  top: 60%;
+  left:5%;
+}
