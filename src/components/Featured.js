@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./styles/Featured/Featured.css";
+import {FetchContext} from './contexts/FetchContext'
 
-const Featured = ({ items, isLoading }) => {
+const Featured = () => {
+  const {items} = useContext(FetchContext)
+    const {isLoading} = useContext(FetchContext)
+    const {fetchError} = useContext(FetchContext)
   return (
     <div className="featured">
       <h2 className="featured__title">Featured Products</h2>
+      {fetchError ? (<p>Sorry, something went wrong</p>):("")}
       {isLoading ? (<p>Loading...</p>) : (
         <section className="featured__items">
         {items.slice(17).map((item) => (
