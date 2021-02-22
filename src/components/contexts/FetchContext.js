@@ -1,6 +1,5 @@
 import React, {useState, createContext} from 'react'
 
-
 export const FetchContext = createContext()
 
 export function FetchContextProvider({children}) {
@@ -9,7 +8,7 @@ export function FetchContextProvider({children}) {
     const [fetchError, setFetchError] = useState(false);
 
     const fetchItems = async () => {
-        await fetch("https://fakestoreapi.com/products")
+        await fetch(`https://fakestoreapi.com/products/`)
           .then((res) => res.json())
           .then(
             (data) => {
@@ -25,7 +24,7 @@ export function FetchContextProvider({children}) {
         items, 
         isLoading,
         fetchError,
-        fetchItems
+        fetchItems,
     }
 
 

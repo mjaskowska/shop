@@ -1,0 +1,29 @@
+.item-list{
+width: 90%;
+margin: 100px auto;
+grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+grid-auto-rows: min-content;
+}
+.item{
+cursor: pointer;
+    &:hover {
+        background: rgb(245, 245, 245);
+    }
+}
+.item__image {
+    width: 70%;
+    max-height: 200px;
+    }
+.item__price {
+font-size: 0.8rem;
+font-weight: 500;
+}
+
+.item__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    i {
+        font-size: 1.2rem;
+    }
+}
