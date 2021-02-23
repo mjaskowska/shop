@@ -27,6 +27,7 @@
 }
 
 .hero__title {
+  width: 75%;
   color: white;
   z-index: 100;
   position: absolute;

@@ -1,26 +1,72 @@
-.nav-container {
-    width: 100%;
-    height: 7vh;
-    font-size: 0.8rem;
-    font-weight: normal;
+header img {
+    width: 20px;
 }
-.nav-list {
+header {
     display: flex;
-    width: 60%;
-    max-width: 400px;
-    margin: 10px auto;
-    align-content: center;
-    justify-content: center;
-    border-bottom: 1px solid grey;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 80px;
+    overflow: hidden;
 }
-.nav-item{
-    padding: 10px 20px;
-    border: none;
-    background: none;
-    outline: none;
+a {
+    text-decoration: none;
+    color: black;
+}
+.hamburger{ 
     cursor: pointer;
+    justify-self: flex-end;
     &:hover {
-        font-weight: 600;
-        transform: scale(0.95);
+        transform: scaleX(1.05)
     }
 }
+.nav {
+    background: #ffffffea;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 99;
+    transition: all 0.7s ease-in-out;
+}
+
+.nav-item a, li{
+    list-style: none;
+    padding: 0 5px;
+    font-size: 0.85rem;
+    color: #303030;
+    &:hover {
+        color: #979797;
+    }
+}
+.nav-basket, .menu-close-btn {
+    cursor: pointer;
+}
+.menu-close-btn {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+}
+.nav.toggle-menu{
+    top: 0;
+}
+
+@media (min-width: 500px ){
+    .hamburger, .menu-close-btn {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        height: 70px;
+        transition: none;
+    
+    }
+}
+
