@@ -10,14 +10,14 @@ const Featured = () => {
 
   return (
     <section className="featured">
-      <h2 className="featured-title">TRENDING NOW</h2>
+      <h2 className="title">TRENDING NOW</h2>
       {fetchError ? (
-        <p className="featured-info">Sorry, something went wrong</p>
+        <p className="info">Sorry, something went wrong</p>
       ) : (
         ""
       )}
       {isLoading ? (
-        <p className="featured-info">Loading...</p>
+        <p className="info">Loading...</p>
       ) : (
         <section className="item-list">
           {items.slice(0, 4).map((item) => (

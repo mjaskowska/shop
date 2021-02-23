@@ -1,1 +1,38 @@
-/* No CSS *//*# sourceMappingURL=Products.css.map */
+@use '../Featured/Featured.scss';
+.products {
+  max-width: 1300px;
+  display: block;
+  margin: 70px auto;
+  margin-bottom: 100px;
+}
+
+.products a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-bar {
+  width: 90%;
+  max-width: 1300px;
+  display: block;
+  margin: 10px auto;
+}
+
+.search-input {
+  box-shadow: 0 0 2px #b3b3b3;
+  padding: 10px;
+  border: none;
+  display: block;
+  margin: 0 2% 0 auto;
+  outline: none;
+}
+
+.search-input:focus {
+  border: 1px solid #444444;
+}
+
+.search-input::placeholder {
+  color: #b3b3b3;
+  font-style: italic;
+}
+/*# sourceMappingURL=Products.css.map */
