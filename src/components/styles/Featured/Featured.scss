@@ -1,6 +1,11 @@
 .featured {
   margin-top: 70px;
   margin-bottom: 70px;
+
+  a{
+      text-decoration: none;
+      color: inherit;
+  }
 }
 .featured-title {
   font-size: 1.1rem;
@@ -10,7 +15,7 @@
 .featured-info {
   font-size: 0.8rem;
   text-align: center;
-  color: rgb(110, 110, 110);
+  color: #6e6e6e;
 }
 .item-list {
   width: 90%;
@@ -23,12 +28,19 @@
   grid-gap: 1%;
 }
 .item {
-  border: 1px solid #b3b3b3;
+    padding: 5px;
+  box-shadow: 0 0 2px #b3b3b3;
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
+  
+}
+.item:hover .item-title {
+    color: #6e6e6e;
+
 }
 .item-image {
   max-width: 80%;
@@ -51,5 +63,5 @@
 }
 .item-price {
   margin: 5px auto;
-  color: rgb(68, 68, 68);
+  color: #444444;
 }

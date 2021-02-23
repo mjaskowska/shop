@@ -3,6 +3,11 @@
   margin-bottom: 70px;
 }
 
+.featured a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .featured-title {
   font-size: 1.1rem;
   text-align: center;
@@ -27,12 +32,18 @@
 }
 
 .item {
-  border: 1px solid #b3b3b3;
+  padding: 5px;
+  box-shadow: 0 0 2px #b3b3b3;
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
+}
+
+.item:hover .item-title {
+  color: #6e6e6e;
 }
 
 .item-image {
