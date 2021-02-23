@@ -28,7 +28,7 @@ const Products = () => {
             {items.map((item) => (
               <div key={item.id} className="item">
                 <img className="item-image" src={item.image} alt=""></img>
-                <div className="item-description">
+                <div className="item-details">
                   <p className="item-price">${item.price}</p>
                   <p className="item-title">{item.title}</p>
                 </div>

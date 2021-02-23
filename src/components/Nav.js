@@ -34,6 +34,9 @@ const Nav = () => {
           <li className="nav-item">
             <Link to="/login">LOGIN/REGISTER</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/products/id">Product page</Link>
+          </li>
           <li className="menu-close-btn" onClick={handleToggleMenu}>
             <img src={Close} alt="close"></img>
           </li>
