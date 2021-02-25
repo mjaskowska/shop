@@ -39,14 +39,7 @@
        font-size: 0.9rem;
        padding: 5px 0;
    }
-   .add-btn {
-       border: 1px solid black;
-       background: black;
-       color: white;
-       font-size: 0.7rem;
-       padding: 5px 10px;
-       margin-bottom: 30px;
-   }
+ 
     .item-description{
         font-size: 0.9rem;
         width: 90%;
@@ -76,6 +69,7 @@
             position: relative;
             top: -70px;
             left: 300px;
+            width: 150px;
         }
     }
     

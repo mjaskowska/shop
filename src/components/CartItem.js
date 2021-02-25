@@ -1,17 +1,10 @@
-import React, {useState} from 'react'
+import React, { useContext} from 'react'
+import { FetchContext } from './contexts/FetchContext'
 import './styles/Basket/Basket.css'
 
 const CartItem = ({cartItem}) => {
-    const [count, setCount] = useState(0)
+    const {count, decrement, increment} =useContext(FetchContext)
 
-    const decrement = () => {
-        if(count > 0){
-            setCount(prevCount  => prevCount - 1)
-        }        
-    }
-    const increment = () => {
-        setCount(prevCount  => prevCount + 1)
-    }
 
     return (
         <div className="cart-item">
