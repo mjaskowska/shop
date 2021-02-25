@@ -30,11 +30,16 @@ export function FetchContextProvider({children}) {
         const data = items.find(item => {
             return item.id === parseInt(id1)
         })
+               console.log(data)
 
 
-        console.log(data)
-     
-        setCart([...cart, data])
+        if(cart.filter(el => el.id === parseInt(id1)).length > 0){
+            setCart([...cart])
+        } else {
+            setCart([...cart, data])
+        }
+
+       
         
     }
    
