@@ -6,6 +6,7 @@ export function FetchContextProvider({children}) {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [fetchError, setFetchError] = useState(false);
+    const [cart, setCart] = useState([])
 
     const fetchItems = async () => {
         await fetch(`https://fakestoreapi.com/products/`)
@@ -20,11 +21,27 @@ export function FetchContextProvider({children}) {
           })
           setIsLoading(false)
       };
+
+    const addToCart = (id1) => {
+        console.log('add to basket')
+        console.log(id1 + "th item add to cart")
+        const data = items.find(item => {
+            return item.id === parseInt(id1)
+        })
+
+        console.log(data)
+        setCart([...cart, data])
+        
+    }
+   
     const value={
         items, 
         isLoading,
         fetchError,
         fetchItems,
+        cart,
+        setCart,
+        addToCart
     }
 
 

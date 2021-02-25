@@ -1,15 +1,16 @@
 import React, { useContext, useEffect } from "react";
 import { FetchContext } from "./contexts/FetchContext";
 import "./styles/Products/Products.css";
-import {Link, useRouteMatch} from 'react-router-dom'
+import {Link } from 'react-router-dom'
+
 
 const Products = () => {
   const { items } = useContext(FetchContext);
   const { isLoading } = useContext(FetchContext);
   const { fetchError } = useContext(FetchContext);
   const { fetchItems } = useContext(FetchContext);
+  const { addToCart } = useContext(FetchContext);
 
-  const {url, path} = useRouteMatch()
 
   useEffect(() => {
     fetchItems();
@@ -31,14 +32,20 @@ const Products = () => {
               
               
               <div key={item.id} className="item">
-                <Link to={`${url}/${item.id}`}>
                 <img className="item-image" src={item.image} alt=""></img>
                 <div className="item-details">
+                  <Link to="/basket">
+                  <button onClick={(e)=> {
+                    
+                    addToCart(item.id)
+                  }} className="add-btn">ADD TO BASKET</button>
+                  </Link>
+                  
                   <p className="item-price">${item.price}</p>
                   <p className="item-title">{item.title}</p>
+                  {/* <p className="item-description">{item.description}</p> */}
                 </div>
                 
-                </Link>
               </div>
             ))}
           </section>
