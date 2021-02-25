@@ -1,9 +1,24 @@
-import React, { useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import { FetchContext } from './contexts/FetchContext'
 import './styles/Basket/Basket.css'
 
 const CartItem = ({cartItem}) => {
-    const {count, decrement, increment} =useContext(FetchContext)
+    const {cart, setCart} = useContext(FetchContext)
+    const [count, setCount] = useState(1)
+
+    const decrement = () => {
+        if(count > 1){
+            setCount(prevCount  => prevCount - 1)
+        }  
+        else {
+            console.log('remove item from cart')
+            const filteredCart = cart.filter(item => item.id !== cartItem.id)
+            setCart(filteredCart)
+        }      
+    }
+    const increment = () => {
+        setCount(prevCount  => prevCount + 1)
+    }
 
 
     return (
