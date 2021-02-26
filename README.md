@@ -5,6 +5,9 @@ used:
 ##### React
 functional components
 hooks (useState, useEffect, useContext)
-routing
+React Router 
+fetch API
+local storage
 
 ##### SCSS
+##### Firebase authentication
