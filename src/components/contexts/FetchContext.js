@@ -7,6 +7,14 @@ export function FetchContextProvider({children}) {
     const [isLoading, setIsLoading] = useState(true);
     const [fetchError, setFetchError] = useState(false);
     const [cart, setCart] = useState([])
+    const [filteredItems, setFilteredItems] = useState([])
+    const [searchValue, setSearchValue] = useState("")
+
+    const handleSearch = (e) => {
+        e.preventDefault()
+        setSearchValue(e.target.value)
+    
+    }
 
 
     const fetchItems = async () => {
@@ -48,6 +56,11 @@ export function FetchContextProvider({children}) {
         cart,
         setCart,
         addToCart,
+        filteredItems, 
+        setFilteredItems,
+        searchValue,
+        setSearchValue,
+        handleSearch
     }
 
 

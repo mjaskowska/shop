@@ -2,14 +2,15 @@ import React, { useContext, useEffect } from "react";
 import { FetchContext } from "./contexts/FetchContext";
 import "./styles/Products/Products.css";
 import {Link } from 'react-router-dom'
+import SearchBar from './SearchBar'
 
 
 const Products = () => {
-  const { items } = useContext(FetchContext);
   const { isLoading } = useContext(FetchContext);
   const { fetchError } = useContext(FetchContext);
   const { fetchItems } = useContext(FetchContext);
   const { addToCart } = useContext(FetchContext);
+  const { filteredItems } = useContext(FetchContext);
 
 
   useEffect(() => {
@@ -24,11 +25,9 @@ const Products = () => {
         <p className="info">Loading...</p>
       ) : (
         <section className="products-container">
-          <section className="search-bar">
-            <input className="search-input" type="text" placeholder="Search..."></input>
-          </section>
+         <SearchBar />
           <section className="item-list">
-            {items.map((item) => (
+            {filteredItems.map((item) => (
               
               
               <div key={item.id} className="item">
