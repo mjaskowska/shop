@@ -11,6 +11,27 @@
   color: inherit;
 }
 
+.item-description {
+  font-size: 0.9rem;
+  width: 90%;
+  max-width: 500px;
+}
+
+.add-btn {
+  width: 75%;
+  display: block;
+  border: 1px solid #cecece;
+  background: #ebebeb;
+  font-size: 0.7rem;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #acacac;
+}
+
 .search-bar {
   width: 90%;
   max-width: 1300px;
@@ -36,24 +57,30 @@
   font-style: italic;
 }
 
-.item-description {
-  font-size: 0.9rem;
+.categories-list {
   width: 90%;
-  max-width: 500px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.add-btn {
-  width: 75%;
-  display: block;
-  border: 1px solid #cecece;
-  background: #ebebeb;
-  font-size: 0.7rem;
+.category {
+  border: none;
+  color: black;
+  outline: none;
+  background: transparent;
   padding: 5px 10px;
-  margin-top: 10px;
+  margin: 2px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
-.add-btn:hover {
-  background: #acacac;
+.category:hover {
+  border-bottom: 1px solid #b3b3b3;
+}
+
+.category img {
+  width: 10px;
 }
 /*# sourceMappingURL=Products.css.map */

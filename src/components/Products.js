@@ -3,18 +3,21 @@ import { FetchContext } from "./contexts/FetchContext";
 import "./styles/Products/Products.css";
 import {Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
+import Categories from './Categories'
 
 
 const Products = () => {
   const { isLoading } = useContext(FetchContext);
   const { fetchError } = useContext(FetchContext);
   const { fetchItems } = useContext(FetchContext);
+  const { fetchCategories } = useContext(FetchContext);
   const { addToCart } = useContext(FetchContext);
   const { filteredItems } = useContext(FetchContext);
 
 
   useEffect(() => {
     fetchItems();
+    fetchCategories()
   }, []);
 
   return (
@@ -25,6 +28,7 @@ const Products = () => {
         <p className="info">Loading...</p>
       ) : (
         <section className="products-container">
+          <Categories />
          <SearchBar />
           <section className="item-list">
             {filteredItems.map((item) => (

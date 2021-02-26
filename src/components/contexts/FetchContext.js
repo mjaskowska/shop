@@ -9,6 +9,7 @@ export function FetchContextProvider({children}) {
     const [cart, setCart] = useState([])
     const [filteredItems, setFilteredItems] = useState([])
     const [searchValue, setSearchValue] = useState("")
+    const [categories, setCategories] = useState([])
 
     const handleSearch = (e) => {
         e.preventDefault()
@@ -16,7 +17,12 @@ export function FetchContextProvider({children}) {
     
     }
 
-
+    const fetchCategories = async () => {
+        await fetch(`https://fakestoreapi.com/products/categories`)
+        .then((res)=> res.json())
+        .then(data => setCategories(data))
+        .catch(()=>console.log('fetching categories error'))
+    }
     const fetchItems = async () => {
         await fetch(`https://fakestoreapi.com/products/`)
           .then((res) => res.json())
@@ -60,7 +66,9 @@ export function FetchContextProvider({children}) {
         setFilteredItems,
         searchValue,
         setSearchValue,
-        handleSearch
+        handleSearch,
+        fetchCategories,
+        categories
     }
 
 

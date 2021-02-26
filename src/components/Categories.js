@@ -1,26 +1,52 @@
-import React, {useContext} from 'react'
-import { FetchContext } from './contexts/FetchContext'
+import React, { useContext, useEffect, useState } from "react";
+import { FetchContext } from "./contexts/FetchContext";
 
 const Categories = () => {
-    const {setQuery, items} = useContext(FetchContext)
+  const { categories } = useContext(FetchContext);
+  const { setFilteredItems,items } = useContext(FetchContext);
+  const [currCategory, setCurrCategory] = useState("");
 
-    const handleShowAllCategories = () => {
-setQuery("")
+  useEffect(() => {
+    
+    console.log(currCategory)
+    if(currCategory.length === 0){
+        setFilteredItems(items)
     }
+    else{
+        setFilteredItems(
+            items.filter((item) => {
+              return item.category.toLowerCase() === currCategory.toLowerCase() ;
+            })
+          );
+    }
+  }, [currCategory]);
 
-    return (
-        
-        <div>
-            <ul>
-                <li onClick={handleShowAllCategories}>All</li>
-                {items}.map((item) => (<li>{item}</li>
-                )
-                
-                )
-             
-            </ul>
-        </div>
-    )
-}
+  const handleCategoryChange = (e) => {
+    e.preventDefault();
+    setCurrCategory("")
+    console.log(e.target.value);
+    setCurrCategory(e.target.value)
+    
+  };
+  
 
-export default Categories
+  return (
+    <div className="categories-list">
+      <button onClick={handleCategoryChange} value="" className="category">
+        ALL
+      </button>
+      {categories.map((category) => (
+        <button
+          value={category}
+          onClick={handleCategoryChange}
+          className="category"
+          key={Math.random()}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+  );
+};
+
+export default Categories;
