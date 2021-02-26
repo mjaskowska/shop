@@ -25,12 +25,9 @@ export function FetchContextProvider({children}) {
 
     const addToCart = (id1) => {
 
-        console.log('add to basket')
-        console.log(id1 + "th item add to cart")
         const data = items.find(item => {
             return item.id === parseInt(id1)
         })
-               console.log(data)
 
 
         if(cart.filter(el => el.id === parseInt(id1)).length > 0){

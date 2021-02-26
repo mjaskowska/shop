@@ -11,7 +11,6 @@ const CartItem = ({cartItem}) => {
             setCount(prevCount  => prevCount - 1)
         }  
         else {
-            console.log('remove item from cart')
             const filteredCart = cart.filter(item => item.id !== cartItem.id)
             setCart(filteredCart)
         }      

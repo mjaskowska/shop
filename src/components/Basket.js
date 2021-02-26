@@ -7,7 +7,6 @@ import {Link } from 'react-router-dom'
 const Basket = () => {
     const { cart } = useContext(FetchContext);
 
-console.log(cart)
     return (
         <>
         <Link to="/products"><img className="back" src={Arrow} alt=""></img></Link>

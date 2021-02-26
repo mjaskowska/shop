@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import "./styles/Featured/Featured.css";
 import { FetchContext } from "./contexts/FetchContext";
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const Featured = () => {
   const { items } = useContext(FetchContext);
   const { isLoading } = useContext(FetchContext);
   const { fetchError } = useContext(FetchContext);
+  const { addToCart } = useContext(FetchContext);
 
   return (
     <section className="featured">
@@ -27,6 +28,12 @@ const Featured = () => {
                 <p className="item-price">${item.price}</p>
                 <p className="item-title">{item.title}</p>
               </div>
+              <Link to="/basket">
+                  <button onClick={(e)=> {
+                    
+                    addToCart(item.id)
+                  }} className="add-btn">ADD TO BASKET</button>
+                  </Link>
             </div>
           ))}
         </section>

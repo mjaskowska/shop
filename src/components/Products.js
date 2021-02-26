@@ -34,6 +34,8 @@ const Products = () => {
               <div key={item.id} className="item">
                 <img className="item-image" src={item.image} alt=""></img>
                 <div className="item-details">
+                <p className="item-price">${item.price}</p>
+                  <p className="item-title">{item.title}</p>
                   <Link to="/basket">
                   <button onClick={(e)=> {
                     
@@ -41,9 +43,7 @@ const Products = () => {
                   }} className="add-btn">ADD TO BASKET</button>
                   </Link>
                   
-                  <p className="item-price">${item.price}</p>
-                  <p className="item-title">{item.title}</p>
-                  {/* <p className="item-description">{item.description}</p> */}
+                  
                 </div>
                 
               </div>
