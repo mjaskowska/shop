@@ -8,7 +8,6 @@ const Categories = () => {
 
   useEffect(() => {
     
-    console.log(currCategory)
     if(currCategory.length === 0){
         setFilteredItems(items)
     }
@@ -24,7 +23,6 @@ const Categories = () => {
   const handleCategoryChange = (e) => {
     e.preventDefault();
     setCurrCategory("")
-    console.log(e.target.value);
     setCurrCategory(e.target.value)
     
   };

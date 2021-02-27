@@ -1,0 +1,62 @@
+.register-container {
+width: 90%;
+max-width: 500px;
+display: block;
+margin: 0 auto;
+margin-top: 40px;
+border: 1px solid black;
+border-radius: 10px;
+}
+.error-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
+    font-weight: 500;
+}
+.login-title {
+    text-align: center;
+    font-size: 1rem;
+    margin: 15px;
+}
+.form-container {
+width: 90%;
+margin: 0 auto;
+padding-bottom: 20px;
+}
+.form {
+    margin-bottom: 25px;
+
+    label{
+        font-size: 0.9rem;
+        margin-left: 2%;
+    }
+    input{
+        width: 100%;
+        padding: 5px;
+        padding-left: 20px;
+        border: none;
+        border-bottom: 1px solid black;
+            &::placeholder {
+                font-size: 0.7rem;
+                font-style: italic;
+                color: #c2c2c2;
+            }  
+    }
+    
+}
+.login-btn {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+.resetpassword-btn {
+    font-size: 0.8rem;
+    display: block;
+    margin: 0 auto;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}

@@ -9,10 +9,12 @@ import Basket from "./components/Basket";
 import Register from './components/Register'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FetchContextProvider } from "./components/contexts/FetchContext";
+import { AuthProvider } from "./components/contexts/AuthContext";
 
 function App() {
   return (
-    <FetchContextProvider>
+    <AuthProvider>
+<FetchContextProvider>
       <Router>
         <Nav />
         <Switch>
@@ -26,6 +28,8 @@ function App() {
         </Switch>
       </Router>
     </FetchContextProvider>
+    </AuthProvider>
+    
   );
 }
 
