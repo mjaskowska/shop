@@ -1,5 +1,6 @@
 import React, {useRef, useState} from "react";
 import {useAuth} from './contexts/AuthContext'
+import {Link, useHistory } from 'react-router-dom'
 
 const Register = () => {
     const emailRef= useRef()
@@ -8,6 +9,7 @@ const Register = () => {
     const {signup} = useAuth()
     const [authError, setAuthError] = useState('')
     const [authLoading, setAuthLoading] = useState(false)
+    const history = useHistory()
 
      const handleSubmit = async (e) =>  {
         e.preventDefault()
@@ -19,6 +21,7 @@ const Register = () => {
             setAuthError('')
             setAuthLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
+            history.push("/")
         } catch {
             setAuthError('failed to create an account')
         }
@@ -52,7 +55,8 @@ const Register = () => {
            
       
     </div>
-    <button className="resetpassword-btn">Already have an account? Log In</button>
+    <Link to="/login"><button className="resetpassword-btn">Already have an account? Log In</button></Link>
+    
     </>
   );
 };
