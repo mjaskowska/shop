@@ -26,8 +26,7 @@ const Register = () => {
             setAuthError('failed to create an account')
         }
         setAuthLoading(false)
-
-        
+  
     }
 
   return (

@@ -6,7 +6,7 @@ import {Link, useHistory } from 'react-router-dom'
 const Login = () => {
     const emailRef= useRef()
     const passwordRef= useRef()
-    const {login, currentUser} = useAuth()
+    const {login} = useAuth()
     const [authError, setAuthError] = useState('')
     const [authLoading, setAuthLoading] = useState(false)
     const history = useHistory()
@@ -33,7 +33,7 @@ const Login = () => {
       
         <div className="login-container">
           <h2 className="login-title">Log In</h2>
-        <p>{currentUser}</p>
+       
           {authError && <p className="error-text">{authError}</p>}
           <form onSubmit={handleSubmit} className="form-container">
             <div className="form">

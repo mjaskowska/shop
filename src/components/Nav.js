@@ -4,9 +4,12 @@ import "./styles/Nav/Nav.css";
 import Hamburger from "../assets/bars-solid.svg";
 import Close from "../assets/times-circle-regular.svg";
 import Basket from "../assets/shopping-cart-solid.svg";
+import User from '../assets/user.svg'
+import {useAuth} from './contexts/AuthContext'
 
 const Nav = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
+    const {currentUser } = useAuth()
 
     const handleToggleMenu = () => {
         setToggleMenu(!toggleMenu)
@@ -40,9 +43,15 @@ const Nav = () => {
           </li>
         </ul>
       </nav>
-      <div className="nav-basket">
+      
+      
+      
+      <div className="nav-side-icons">
+      <Link className={currentUser ? "" : "profile-hidden"} to="/profile">
+          <img className="profile" src={User} alt="menu"></img>
+        </Link>
         <Link to="/basket">
-          <img src={Basket} alt="menu"></img>
+          <img className="nav-basket" src={Basket} alt="menu"></img>
         </Link>
       </div>
     </header>

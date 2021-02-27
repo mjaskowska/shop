@@ -47,6 +47,14 @@ a {
 .nav-basket, .menu-close-btn {
     cursor: pointer;
 }
+.profile {
+    margin-right: 10px;
+    width: 15px;
+}
+.profile-hidden {
+    // display: none;
+    border: 1px solid red;
+}
 .menu-close-btn {
     position: absolute;
     top: 4%;
