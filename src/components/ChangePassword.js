@@ -41,8 +41,8 @@ const ChangePassword = () => {
 
         {authError && <p className="error-text">{authError}</p>}
         <form onSubmit={handleSubmit} className="form-container">
-          <p className="email-text">Email: {currentUser.email}</p>
-          <p style={{ marginBottom: "15px" }}>Email: useremail@email.com</p>
+          <p style={{ marginBottom: "15px" }} className="email-text">Email: {currentUser.email}</p>
+          
           <div className="form">
             <label>New Password</label>
             <input

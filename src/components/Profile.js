@@ -27,7 +27,7 @@ const handleLogout = async () => {
        
           {logOutError && <p className="error-text">{logOutError}</p>}
           <p className="email-text">Email: {currentUser.email}</p>
-          <p className="email-text">Email: useremail@email.com</p>
+          
           <Link to="change-password">
           <button className="secondary-btn btn-left">Change Password</button>
           </Link>
