@@ -9,12 +9,9 @@ const Basket = () => {
 
     useEffect(()=>{
         getCartFromLocalStorage()
-        saveCartToLocalStorage()
     }, [])
 
-    useEffect(()=>{
-        saveCartToLocalStorage()
-    }, [cart])
+  
 
     return (
         <>

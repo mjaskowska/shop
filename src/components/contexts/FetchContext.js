@@ -54,18 +54,18 @@ export function FetchContextProvider({children}) {
         
     }
    
-    const saveCartToLocalStorage = () => {
-          localStorage.setItem('cart-items', JSON.stringify(cart))
-       
-
-    }
-
     const getCartFromLocalStorage = () => {
         if(localStorage.getItem('cart-items') === null) {
+            
             localStorage.setItem('cart-items', JSON.stringify([]))
+           
+            
         } else {
+            if(cart.length > 0 ){
+                localStorage.setItem('cart-items', JSON.stringify(cart))
+            }
             let localCart = JSON.parse(localStorage.getItem("cart-items"))
-            setCart(cart, ...localCart)
+            setCart(localCart)
         }
     }
 
@@ -84,7 +84,6 @@ export function FetchContextProvider({children}) {
         handleSearch,
         fetchCategories,
         categories,
-        saveCartToLocalStorage,
         getCartFromLocalStorage
     }
 
