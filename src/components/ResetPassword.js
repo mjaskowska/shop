@@ -44,13 +44,13 @@ const ResetPassword = () => {
                 <input placeholder="Enter your email" required type="email" ref={emailRef}></input>
             </div>
                      
-             <button disabled={authLoading} type="submit" className="login-btn">Reset Password</button>
-             <Link to="/login"><button>Log In</button></Link>
+             <button disabled={authLoading} type="submit" className="main-btn">Reset Password</button>
+             <Link to="/login"><button className="secondary-btn">Cancel</button></Link>
           </form>
                
           
         </div>
-        <Link to="/register"><button className="resetpassword-btn">Don't have an account? Sign up</button></Link>
+        <Link to="/register"><button className="secondary-btn">Don't have an account? Sign up</button></Link>
         
         </>
     )

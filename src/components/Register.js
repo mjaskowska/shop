@@ -49,12 +49,12 @@ const Register = () => {
             <label>Confirm Password</label>
             <input placeholder="Repeat your password" required type="password" ref={confirmPasswordRef}></input>
          </div>
-         <button disabled={authLoading} type="submit" className="login-btn">Create an account</button>
+         <button disabled={authLoading} type="submit" className="main-btn">Create an account</button>
       </form>
            
       
     </div>
-    <Link to="/login"><button className="resetpassword-btn">Already have an account? Log In</button></Link>
+    <Link to="/login"><button className="secondary-btn">Already have an account? Log In</button></Link>
     
     </>
   );

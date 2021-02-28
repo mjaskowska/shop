@@ -44,14 +44,14 @@ padding-bottom: 20px;
     }
     
 }
-.login-btn {
+.main-btn {
     display: block;
     margin: 0 auto;
     width: 50%;
     padding: 5px;
     cursor: pointer;
 }
-.resetpassword-btn {
+.secondary-btn {
     font-size: 0.8rem;
     display: block;
     margin: 0 auto;
@@ -59,4 +59,11 @@ padding-bottom: 20px;
     border: none;
     cursor: pointer;
     background: transparent;
+}
+.btn-left {
+   margin: 20px 5%;
+   border-bottom: 1px solid black;
+}
+.email-text {
+    margin-left: 5%;
 }

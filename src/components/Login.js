@@ -45,13 +45,13 @@ const Login = () => {
                 <input placeholder="Enter your password"  required type="password" ref={passwordRef}></input>
             </div>
             
-             <button disabled={authLoading} type="submit" className="login-btn">Log In</button>
-             <Link to="/reset-password"><button>Forgot password?</button></Link>
+             <button disabled={authLoading} type="submit" className="main-btn">Log In</button>
+             <Link to="/reset-password"><button className="secondary-btn">Forgot password?</button></Link>
           </form>
                
           
         </div>
-        <Link to="/register"><button className="resetpassword-btn">Don't have an account? Sign up</button></Link>
+        <Link to="/register"><button className="secondary-btn">Don't have an account? Sign up</button></Link>
         
         </>
     )

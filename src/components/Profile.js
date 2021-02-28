@@ -26,14 +26,14 @@ const handleLogout = async () => {
           <h2 className="login-title">Profile</h2>
        
           {logOutError && <p className="error-text">{logOutError}</p>}
-          {/* <p>Email: {currentUser.email}</p> */}
-          <p>Email: blabla</p>
+          <p className="email-text">Email: {currentUser.email}</p>
+          <p className="email-text">Email: useremail@email.com</p>
           <Link to="change-password">
-          <button>Change Password</button>
+          <button className="secondary-btn btn-left">Change Password</button>
           </Link>
           
 
-          <button onClick={handleLogout}>Log Out</button>
+          <button onClick={handleLogout} className="secondary-btn btn-left">Log Out</button>
                
           
         </div>

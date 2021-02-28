@@ -50,7 +50,7 @@
   color: #c2c2c2;
 }
 
-.login-btn {
+.main-btn {
   display: block;
   margin: 0 auto;
   width: 50%;
@@ -58,7 +58,7 @@
   cursor: pointer;
 }
 
-.resetpassword-btn {
+.secondary-btn {
   font-size: 0.8rem;
   display: block;
   margin: 0 auto;
@@ -66,5 +66,14 @@
   border: none;
   cursor: pointer;
   background: transparent;
+}
+
+.btn-left {
+  margin: 20px 5%;
+  border-bottom: 1px solid black;
+}
+
+.email-text {
+  margin-left: 5%;
 }
 /*# sourceMappingURL=Login.css.map */

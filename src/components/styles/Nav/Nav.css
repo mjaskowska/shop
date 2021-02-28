@@ -40,18 +40,21 @@ a {
   transition: all 0.7s ease-in-out;
 }
 
-.nav-item a, li {
+.nav-item a,
+li {
   list-style: none;
   padding: 0 5px;
   font-size: 0.85rem;
   color: #303030;
 }
 
-.nav-item a:hover, li:hover {
+.nav-item a:hover,
+li:hover {
   color: #979797;
 }
 
-.nav-basket, .menu-close-btn {
+.nav-basket,
+.menu-close-btn {
   cursor: pointer;
 }
 
@@ -61,7 +64,7 @@ a {
 }
 
 .profile-hidden {
-  border: 1px solid red;
+  display: none;
 }
 
 .menu-close-btn {
@@ -75,7 +78,8 @@ a {
 }
 
 @media (min-width: 500px) {
-  .hamburger, .menu-close-btn {
+  .hamburger,
+  .menu-close-btn {
     display: none;
   }
   .nav {
