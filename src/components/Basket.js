@@ -1,11 +1,20 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import { FetchContext } from "./contexts/FetchContext";
 import CartItem from './CartItem'
 import Arrow from "../assets/long-arrow-alt-left-solid.svg";
 import {Link } from 'react-router-dom'
 
 const Basket = () => {
-    const { cart } = useContext(FetchContext);
+    const { cart, saveCartToLocalStorage, getCartFromLocalStorage } = useContext(FetchContext);
+
+    useEffect(()=>{
+        getCartFromLocalStorage()
+        saveCartToLocalStorage()
+    }, [])
+
+    useEffect(()=>{
+        saveCartToLocalStorage()
+    }, [cart])
 
     return (
         <>
