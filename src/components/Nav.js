@@ -35,7 +35,7 @@ const Nav = () => {
             <Link to="/products">PRODUCTS</Link>
           </li>
           <li className="nav-item">
-            <Link to="/register">LOGIN/REGISTER</Link>
+            <Link to="/login">LOGIN</Link>
           </li>
          
           <li className="menu-close-btn" onClick={handleToggleMenu}>
