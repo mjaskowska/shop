@@ -5,15 +5,15 @@ import Arrow from "../assets/long-arrow-alt-left-solid.svg";
 import {Link } from 'react-router-dom'
 
 const Basket = () => {
-    const { cart, saveCartToLocalStorage, getCartFromLocalStorage } = useContext(FetchContext);
+    const { cart, getCartFromLocalStorage} = useContext(FetchContext);
+
+  
 
     useEffect(()=>{
         getCartFromLocalStorage()
     }, [])
 
-  
-
-    return (
+      return (
         <>
         <Link to="/products"><img className="back" src={Arrow} alt=""></img></Link>
         <div>
