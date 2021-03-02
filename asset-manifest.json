@@ -1,0 +1,19 @@
+{
+  "main.css": "/shop/static/css/main.b1b50d4e.chunk.css",
+  "main.js": "/shop/static/js/main.205ad23f.chunk.js",
+  "main.js.map": "/shop/static/js/main.205ad23f.chunk.js.map",
+  "runtime~main.js": "/shop/static/js/runtime~main.265007fa.js",
+  "runtime~main.js.map": "/shop/static/js/runtime~main.265007fa.js.map",
+  "static/js/2.0cb06e6e.chunk.js": "/shop/static/js/2.0cb06e6e.chunk.js",
+  "static/js/2.0cb06e6e.chunk.js.map": "/shop/static/js/2.0cb06e6e.chunk.js.map",
+  "index.html": "/shop/index.html",
+  "precache-manifest.07a78c2e9be0f25d563fc65f871282a6.js": "/shop/precache-manifest.07a78c2e9be0f25d563fc65f871282a6.js",
+  "service-worker.js": "/shop/service-worker.js",
+  "static/css/main.b1b50d4e.chunk.css.map": "/shop/static/css/main.b1b50d4e.chunk.css.map",
+  "static/media/bars-solid.svg": "/shop/static/media/bars-solid.b3f49afd.svg",
+  "static/media/Hero.css": "/shop/static/media/hero.82c810ba.jpg",
+  "static/media/long-arrow-alt-left-solid.svg": "/shop/static/media/long-arrow-alt-left-solid.d9d4427b.svg",
+  "static/media/shopping-cart-solid.svg": "/shop/static/media/shopping-cart-solid.8bf1af37.svg",
+  "static/media/times-circle-regular.svg": "/shop/static/media/times-circle-regular.3b2678c0.svg",
+  "static/media/user.svg": "/shop/static/media/user.a617dfb6.svg"
+}
