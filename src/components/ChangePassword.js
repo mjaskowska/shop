@@ -24,14 +24,14 @@ const ChangePassword = () => {
 
     promise
       .then(() => {
+        setAuthLoading(false);
         history.push("/");
       })
       .catch(() => {
         setAuthError("Failet to update password. Try again.");
-      })
-      .finally(() => {
         setAuthLoading(false);
-      });
+      })
+     
   };
 
   return (

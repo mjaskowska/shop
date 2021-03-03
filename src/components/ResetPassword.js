@@ -21,11 +21,13 @@ const ResetPassword = () => {
             setAuthLoading(true)
             await resetPassword(emailRef.current.value)
             setAdditionalInfo('Check your inbox.')
+            setAuthLoading(false)
             
         } catch {
             setAuthError('Failed to reset password. Try again.')
+            setAuthLoading(false)
         }
-        setAuthLoading(false)
+        
 
         
     }

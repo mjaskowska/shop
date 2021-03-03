@@ -18,6 +18,16 @@ const handleLogout = async () => {
         catch {
             setLogOutError("Failed to log out. Try again.")
         }
+        // const logout = () => {
+        //     logout()
+        // } 
+        // logout
+        // .then(
+        //     history.push("/")
+        // )
+        // .catch(error => {
+        //     setLogOutError("Failed to log out. Try again.")
+        // })
     }
 
     return (

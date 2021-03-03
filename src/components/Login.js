@@ -19,11 +19,13 @@ const Login = () => {
             setAuthError('')
             setAuthLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
+            setAuthLoading(false)
             history.push("/")
         } catch {
             setAuthError('Failed to log in. Try again.')
+            setAuthLoading(false)
         }
-        setAuthLoading(false)
+        
 
         
     }
