@@ -6,6 +6,7 @@ used:
 functional components
 hooks (useState, useEffect, useContext)
 React Router 
+Redux
 fetch API
 local storage
 
