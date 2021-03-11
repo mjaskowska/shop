@@ -1,37 +1,37 @@
-import React, { useContext, useEffect } from "react";
-import { FetchContext } from "./contexts/FetchContext";
+import React, { useEffect } from "react";
+// import { FetchContext } from "./contexts/FetchContext";
 import "./styles/Products/Products.css";
 import {Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
 import Categories from './Categories'
+import { connect } from 'react-redux'
+import { fetchItems } from '../actions/fetchActions'
 
 
 const Products = () => {
-  const { isLoading } = useContext(FetchContext);
-  const { fetchError } = useContext(FetchContext);
-  const { fetchItems } = useContext(FetchContext);
-  const { fetchCategories } = useContext(FetchContext);
-  const { addToCart } = useContext(FetchContext);
-  const { filteredItems } = useContext(FetchContext);
+  // const { isLoading } = useContext(FetchContext);
+  // const { fetchError } = useContext(FetchContext);
+  // const { fetchItems } = useContext(FetchContext);
+  // const { fetchCategories } = useContext(FetchContext);
+  // const { addToCart } = useContext(FetchContext);
+  // const { filteredItems } = useContext(FetchContext);
 
 
   useEffect(() => {
-    fetchItems();
-    fetchCategories()
+    console.log('from products')
+    // fetchItems();
+
+    // fetchCategories()
   }, []);
 
   return (
     <section className="products">
-      <h2 className="title">PRODUCTS</h2>
-      {fetchError ? <p className="info">Sorry, something went wrong</p> : ""}
-      {isLoading ? (
-        <p className="info">Loading...</p>
-      ) : (
+      <h2 className="title">PRODUCTS</h2>     
         <section className="products-container">
           <Categories />
          <SearchBar />
           <section className="item-list">
-            {filteredItems.map((item) => (
+            {/* {filteredItems.map((item) => (
               
               
               <div key={item.id} className="item">
@@ -50,12 +50,14 @@ const Products = () => {
                 </div>
                 
               </div>
-            ))}
+            ))} */}
+            <p>trolololo</p>
           </section>
         </section>
-      )}
-    </section>
-  );
-};
+      </section>
+  )
+          }
 
-export default Products;
+
+export default Products
+// export default connect(mapStateToProps, {fetchItems})(Products)

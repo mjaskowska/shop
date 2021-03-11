@@ -8,16 +8,21 @@ import Basket from "./components/Basket";
 import Profile from "./components/Profile";
 import ResetPassword from './components/ResetPassword'
 
+import {Provider} from 'react-redux'
+
 import Register from './components/Register'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FetchContextProvider } from "./components/contexts/FetchContext";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import ChangePassword from "./components/ChangePassword";
+import store from './store.js'
+
 
 
 function App() {
   return (
-    <AuthProvider>
+    <Provider store={store}>
+   <AuthProvider>
 <FetchContextProvider>
       <Router>
         <Nav />
@@ -36,6 +41,8 @@ function App() {
       </Router>
     </FetchContextProvider>
     </AuthProvider>
+    </Provider>
+ 
     
   );
 }
